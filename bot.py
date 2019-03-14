@@ -29,6 +29,7 @@ except:
         UNFURL = 'FALSE'
 ###############################################################
 
+MESSAGE = 'Novo mensaje'
 def is_team_join(msg):
     return msg['type'] == "team_join"
 
