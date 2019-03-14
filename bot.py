@@ -61,7 +61,7 @@ def parse_join(message):
         x = x.json()
         x = x["channel"]["id"]
         logging.debug(x)
-	MESSAGE = "Novo mensaje" +user_id
+	MESSAGE = MESSAGE+" @" +user_id
         data = {
                 'token': TOKEN,
                 'channel': CHANNEL_TOKEN,
