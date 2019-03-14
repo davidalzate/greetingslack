@@ -63,8 +63,8 @@ def parse_join(message):
 
         data = {
                 'token': TOKEN,
-                'channel': x,
-                'text': MESSAGE,
+                'channel': CHANNEL_TOKEN,
+                'text': MESSAGE+"@"+user_id,
                 'parse': 'full',
                 'as_user': 'true',
                 }
