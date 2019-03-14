@@ -29,7 +29,7 @@ except:
         UNFURL = 'FALSE'
 ###############################################################
 
-MESSAGE = 'Novo mensaje'
+
 def is_team_join(msg):
     return msg['type'] == "team_join"
 
@@ -61,11 +61,11 @@ def parse_join(message):
         x = x.json()
         x = x["channel"]["id"]
         logging.debug(x)
-
+	MESSAGE = MESSAGE+' @'+user_id
         data = {
                 'token': TOKEN,
                 'channel': CHANNEL_TOKEN,
-                'text': MESSAGE+"@"+user_id,
+                'text': MESSAGE,
                 'parse': 'full',
                 'as_user': 'true',
                 }
